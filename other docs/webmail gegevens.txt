@@ -1,0 +1,8 @@
+
+webmail gegevens:
+
+
+Username:	info@prinsav.nl
+Password:	6817LBgj
+Pop/Imap Server:	mail.prinsav.nl
+Smtp Server:	mail.prinsav.nl
