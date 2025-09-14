@@ -9,8 +9,7 @@ img {
   height: auto;
   display: block;}
 
-:root {
-  --navbar-height: 120px; /* default */}
+:root {  --navbar-height: 130px; /* default */}
 
 html {
   font-family: "Open Sans", sans-serif;
@@ -66,6 +65,7 @@ font-weight: bold;}
 .background-img{width:100% ;}
         
  /* generales */
+a,label {color: #ededed; text-decoration: none; cursor: pointer;}
 
 h1 {margin: 0; 
   padding-bottom: 1rem; 
@@ -87,6 +87,8 @@ h3 {font-family: "sans-serif", sans-serif;
 h4 {font-family: "sans-serif", sans-serif;
   /*font-weight: 100;*/
   font-size: 1.3rem;}
+
+.mobile-break {display: none;}/*for PRINS AV*/
 
 p {margin-top:1.5rem;
   text-align: left ;}
@@ -153,12 +155,11 @@ p {margin-top:1.5rem;
               flex-direction: column;
               justify-content: center;
               gap: 30px; 
-              align-items: flex-start;
-              }
+              align-items: flex-start;}
 
 .icons {display: flex; 
       flex-direction: column;
-      justify-content: space-between; 
+      justify-content: flex-end; 
       align-items: flex-end;
     width: 50%;}
 
@@ -193,6 +194,7 @@ html, body {
 
 /* --- Responsive: collapse to hamburger --- */
 
+@media (min-width:1400px){}
 
 @media (max-width:1200px){
 .logo {width:140px;} 
@@ -203,7 +205,7 @@ p {margin-top: 1rem;}
 
 @media (max-width:991px){
 .foto-stef{justify-content: center;} 
-.contactCont{height: 70vw;}
+.contactCont{height: 50vw;}
 }
 
 @media (max-width: 768px) {
@@ -243,10 +245,13 @@ p {margin-top: 1rem;}
 .contactCont{height: 100%;} 
 }
 @media (max-width:481px) {
-  :root {    --navbar-height: 70px;   }
+  :root {    --navbar-height: 80px;   }
   .logo {width:95px} 
   .background {margin-top: 60px;}  
-.container-section {padding-top: 5%;}}
+.container-section {padding-top: 5%;}
+.container-footer{padding-top:1%}
+.mobile-break {display: block;  /* forces a break on small screens */
+  }}
 
 
 
