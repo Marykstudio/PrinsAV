@@ -1,7 +1,12 @@
 const menuToggle = document.getElementById('menuToggle');
 const navLinks = document.getElementById('navLinks');
 const links = navLinks.querySelectorAll("a");
-const navbarHeight = 130; // same as scroll-padding-top
+
+// --- navbar height ---
+function getNavbarHeight() {
+  return parseInt(
+    getComputedStyle(document.documentElement).getPropertyValue('--navbar-height')
+  );}
 
 // --- Toggle menu on mobile ---
 menuToggle.addEventListener('click', () => {
@@ -22,7 +27,7 @@ window.addEventListener('scroll', () => {
   let current = "";
 
   document.querySelectorAll("section").forEach(section => {
-    const sectionTop = section.offsetTop - navbarHeight;
+    const sectionTop = section.offsetTop - getNavbarHeight();
     if (window.scrollY >= sectionTop) { // 🔹 use scrollY instead of pageYOffset
       current = section.getAttribute("id");
     }
